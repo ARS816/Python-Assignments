@@ -1,0 +1,18 @@
+
+        *{
+            margin: 0px auto;
+            padding: 0px auto;
+        }
+        body{
+            margin: 25px;
+        }
+        table tr td{
+            height: 50px;
+            width: 50px;
+        }
+        .color1{
+            background-color: plum
+        }
+        .color2{
+            background-color: orchid;
+        }

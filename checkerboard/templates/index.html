@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkerboard</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <table>
+        {% for x in range(0, size): %}
+        <tr>
+            {% for y in range(0, size): %}
+            <td class = 'color{{ (x+y)%2 +1 }}'></td>
+            {%endfor%}
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
