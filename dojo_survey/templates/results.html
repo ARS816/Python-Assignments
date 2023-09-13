@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px auto;
+            padding: 0px auto;
+        }
+        table{
+            height: auto;
+            width: auto;
+            border: 2px solid black;
+            border-collapse: collapse;
+            margin-top: 25px;
+        }
+        .border{
+            border: 2px solid black;
+            height: auto;
+            width: auto;
+        }
+        h1{text-align: center;}
+    </style>
+</head>
+
+<body>
+    <h1>Survey Results</h1>
+    <table>
+        <thead>
+            <th class="border">Name</th>
+            <th class="border">Dojo Location</th>
+            <th class="border">Favorite Language</th>
+            <th class="border">Comment</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="border"> {{session['name']}}</td>
+                <td class="border"> {{session['location']}}</td>
+                <td class="border">{{session['language']}} </td>
+                <td class="border">{{session['comments']}}</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

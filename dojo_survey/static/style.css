@@ -1,0 +1,36 @@
+*{
+    margin: 0px auto;
+    padding: 0px auto ;
+}
+.container{
+    border: 2px solid black;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: larger;
+    width: 500px;
+    height: 400px;
+}
+
+form{
+    width: 500px;
+    height: 400px;
+}
+.content{
+    margin: 20px;
+}
+.right{
+    margin-left: 50%;
+}
+.content select, .content input{
+    width: 150px;
+    height: 25px;
+    border: 2px solid black;
+}
+#button{
+    background-color: plum;
+    height: 25px;
+    width: 100px;
+    box-shadow: 3px 3px;
+}
