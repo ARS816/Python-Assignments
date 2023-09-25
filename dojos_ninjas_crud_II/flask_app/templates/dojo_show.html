@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Dojo Show</title>
+</head>
+<body> 
+    <div class="mx-auto w-75">
+        <h1 class="text-center m-3">{{dojo.name}} Ninjas</h1>
+        <table class="table table-hover mx-auto">
+            <thead>
+                <tr>
+                    <th class="border border-dark">First Name</th>
+                    <th class="border border-dark">Last Name</th>
+                    <th class="border border-dark">Age</th>
+                    <th class="border border-dark"></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for ninja in dojo.ninjas %}
+                <tr class="border border-dark">
+                    <td class="border border-dark">{{ninja.first_name}}</td>
+                    <td class="border border-dark">{{ninja.last_name}}</td>
+                    <td class="border border-dark">{{ninja.age}}</td>
+                    <td class="border border-dark">
+                        <a href="http://localhost:8000/edit/{{ninja.id}}">Edit</a> | 
+                        <a href="http://localhost:8000/delete/{{ninja.id}}">Delete</a>
+                    </td>
+                    
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a class="d-flex align-items-center" href="/dojos">Home</a>
+    </div>
+</body>
+</html>
