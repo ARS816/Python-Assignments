@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Cookie Orders</title>
+</head>
+<body> 
+    <div class="mx-auto w-75 d-flex flex-column">
+        <h1 class="mt-5">Cookie Orders</h1>
+        <div class="d-flex justify-content-between mt-3">
+            <h2>All Orders:</h2>
+            <a class="d-flex align-items-center" href="/orders/new">+ New Order</a>
+        </div>
+        <table class="table table-hover mx-auto">
+            <thead>
+                <tr>
+                    <th class="border border-dark">Customer Name</th>
+                    <th class="border border-dark">Cookie Type</th>
+                    <th class="border border-dark">Number of Boxes</th>
+                    <th class="border border-dark">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for order in orders %}
+                <tr class="border border-dark">
+                    <td class="border border-dark">{{order.name}}</td>
+                    <td class="border border-dark">{{order.cookie}}</td>
+                    <td class="border border-dark">{{order.boxes}}</td>
+                    <td class="border border-dark">
+                        <a href="orders/edit/{{order.id}}">Edit</a> 
+                    </td>
+                    
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
